@@ -1,0 +1,120 @@
+// FONTS VARIABLES
+
+// FONT BODY TEXT
+
+@mixin body-text{
+    font-family: $font-body;
+    font-size: 18px;
+    line-height: 117%;
+    @include media-breakpoint-up(md){
+        font-size: 20px;
+    }
+    @include media-breakpoint-up(lg){
+        font-size: 24px;
+    }
+}
+
+.body-text, p{
+    @include body-text;
+}
+
+// FONT LINK
+
+@mixin link{
+    font-family: $font-body;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    @include media-breakpoint-up(lg){
+        font-size: 18px;
+        letter-spacing: normal;
+    }
+}
+
+.link{
+    @include link;
+}
+
+// FONT LINK ACTIVE
+
+@mixin link-active{
+    font-family: $font-link-active;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    @include media-breakpoint-up(lg){
+        font-size: 18px;
+        letter-spacing: normal;
+    }
+}
+
+.link.active{
+    @include link-active;
+}
+
+// FONT TITLE H1
+
+@mixin h1{
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 120%;
+    letter-spacing: 0.91px;
+    @include media-breakpoint-up(md){
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+    @include media-breakpoint-up(lg){
+        font-size: 55px;
+        letter-spacing: 2.75px;
+    }
+}
+
+h1{
+    @include h1;
+}
+
+// FONT TITLE H2
+
+@mixin h2{
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.66px;
+    line-height: 120%;
+    @include media-breakpoint-up(md){
+        font-size: 32px;
+        letter-spacing: 1.6px;
+    }
+    @include media-breakpoint-up(lg){
+        font-size: 45px;
+        letter-spacing: 0.9px;
+    }
+}
+
+// FONT TITLE H3
+
+@mixin h3{
+    font-family: aktiv-grotesk, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.36px;
+    line-height: 120%;
+    @include media-breakpoint-up(md){
+        font-size: 20px;
+        letter-spacing: 0.4px;
+    }
+    @include media-breakpoint-up(lg){
+        font-size: 24px;
+        letter-spacing: 0.48px;
+    }
+}
+
+h3, .h3{
+    @include h3;
+}

@@ -1,0 +1,18 @@
+.header-title{
+    filter: invert(1);
+}
+
+.nav-bar{
+    filter: invert(1);
+}
+
+.burguer-menu{
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+    mix-blend-mode: difference;
+    @include media-breakpoint-up(md){
+        display: none;
+    }
+}
+
