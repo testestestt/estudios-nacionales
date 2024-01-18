@@ -56,5 +56,19 @@ $('.video-container').on('click', function(){
     $(".video-container").css("height", window.innerHeight);
   }
   bandera = !bandera;
-
 });
+
+$('.mobile-nav').on('click', function(){
+  $('.burguer-menu').toggleClass('open');
+  $('.mobile-nav').toggleClass('open');
+  $('.header-container').toggleClass('mix-blend-mode');
+  $('.header-title').toggleClass('active');
+});
+
+$('.burguer-menu').on('click', function(){
+  $('.burguer-menu').toggleClass('open');
+  $('.mobile-nav').toggleClass('open');
+  $('.header-container').toggleClass('mix-blend-mode');
+  $('.header-title').toggleClass('active');
+});
+

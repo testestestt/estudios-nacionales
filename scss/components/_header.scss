@@ -1,5 +1,11 @@
 .header-title{
     filter: invert(1);
+    &.active{
+        filter: invert(0);
+        path{
+            fill: $white;
+        }
+    }
 }
 
 .nav-bar{
@@ -16,3 +22,67 @@
     }
 }
 
+.contact-modal-container{
+    .contact-modal{
+        background: $black;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+    }
+    .contact-text{
+        color: $white;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none; 
+    }
+}
+
+.mobile-nav{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    &.open{
+        display: block;
+    }
+    &::after{
+        content: '';
+        background: $black;
+        opacity: 0.5;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 1;
+        color: $white;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none; 
+    }
+    .close-button{
+        display: block;
+        position: absolute;
+        bottom: 30px;
+        left: 15px;
+        z-index: 1;
+        cursor: pointer;
+    }
+}
