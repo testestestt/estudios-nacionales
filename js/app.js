@@ -58,11 +58,13 @@ $('.video-container').on('click', function(){
   bandera = !bandera;
 });
 
-$('.mobile-nav').on('click', function(){
-  $('.burguer-menu').toggleClass('open');
-  $('.mobile-nav').toggleClass('open');
-  $('.header-container').toggleClass('mix-blend-mode');
-  $('.header-title').toggleClass('active');
+$('.mobile-nav').on('click', function(event){
+  if (!$(event.target).closest('.menu').length) {
+    $('.burguer-menu').toggleClass('open');
+    $('.mobile-nav').toggleClass('open');
+    $('.header-container').toggleClass('mix-blend-mode');
+    $('.header-title').toggleClass('active');
+  }
 });
 
 $('.burguer-menu').on('click', function(){

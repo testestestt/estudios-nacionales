@@ -1,6 +1,10 @@
 
 .bg-black{
-    background: $black !important;
+    background: $black;
+}
+
+.bg-off{
+    background: $off-white;
 }
 
 .index-10{
@@ -10,4 +14,18 @@
 
 .mix-blend-mode{
     mix-blend-mode: difference;
+}
+
+.cap-letter{
+    text-transform: uppercase;
+}
+
+.border-bottom-dotted{
+    border-bottom: 4px dotted $black;
+}
+
+.text-center-sm{
+    @include media-breakpoint-down(md){
+        text-align: center;
+    }
 }

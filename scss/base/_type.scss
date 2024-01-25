@@ -42,7 +42,6 @@
     font-size: 15px;
     letter-spacing: 0.3px;
     text-transform: uppercase;
-    text-decoration: underline;
     @include media-breakpoint-up(lg){
         font-size: 18px;
         letter-spacing: normal;
@@ -85,6 +84,7 @@ h1{
     font-style: normal;
     letter-spacing: 0.66px;
     line-height: 120%;
+    font-size: 22px;
     @include media-breakpoint-up(md){
         font-size: 32px;
         letter-spacing: 1.6px;
@@ -93,6 +93,10 @@ h1{
         font-size: 45px;
         letter-spacing: 0.9px;
     }
+}
+
+h2, .h2{
+    @include h2;
 }
 
 // FONT TITLE H3

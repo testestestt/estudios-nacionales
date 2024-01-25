@@ -1,5 +1,5 @@
 
-.contact-modal-container{
+.contact-modal{
     display: none;
     position: fixed;
     width: 100%;
@@ -8,13 +8,16 @@
     top: 0;
     left: 0;
     backdrop-filter: blur(10px);
-    .contact-modal{
+    &::after{
+        content: '';
+        display: block;
         background: $black;
         width: 100%;
         height: 100%;
-        opacity: 0.5;
+        opacity: 0.6;
     }
     .contact-text{
+        z-index: 1;
         color: $white;
         text-align: center;
         position: absolute;
@@ -24,11 +27,28 @@
         -webkit-user-select: none;
         -ms-user-select: none;
         user-select: none; 
+        a{
+            display: inline-block;
+            &::after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: $white;
+                transform: scaleX(0);
+                transition: transform 0.3s ease-in-out;
+            }
+            &:hover{
+                &::after{
+                    transform: scaleX(1);
+                }
+            }
+        }
     }
 }
 
 .contact-button{
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     right: 30px;
     z-index: 3;
@@ -46,7 +66,7 @@
     &::after{
         content: '';
         background: $black;
-        opacity: 0.5;
+        opacity: 0.6;
         display: block;
         border-radius: 50px;
         width: 100%;
@@ -59,3 +79,25 @@
     }
 }
 
+#contact-mobil-button{
+    &.active{
+        svg{
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.contact-mobil-modal{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    flex-direction: column;
+    transform: translate(50%, 0);
+    &.active{
+        display: flex;
+    }
+    .link{
+        padding-top: 15px;
+    }
+}

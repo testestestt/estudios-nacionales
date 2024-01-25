@@ -1,0 +1,20 @@
+.input-newsletter{
+    @include h3;
+    text-transform: uppercase;
+    line-height: 1em;
+    padding: 15px 20px;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    border-right: 1px solid $black;
+    &::placeholder{
+        color: rgba($black, .4);
+    }
+}
+
+.btn-newsletter{
+    background-color: transparent;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: start;
+}
