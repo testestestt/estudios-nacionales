@@ -1,20 +1,52 @@
-.input-newsletter{
-    @include h3;
-    text-transform: uppercase;
-    line-height: 1em;
-    padding: 15px 20px;
+.input-wrapper{
+    display: flex;
+    align-items: center;
     border-top: 1px solid $black;
     border-bottom: 1px solid $black;
-    border-right: 1px solid $black;
+    height: 60px;
+    padding: 0 15px;
+    @include media-breakpoint-up(md){
+        padding: 0 30px;
+        border-right: 1px solid $black;
+    }
+    @include media-breakpoint-up(lg){
+        height: 80px;
+    }
+}
+
+.input-newsletter{
+    @include h3;
+    width: 100%;
+    text-transform: uppercase;
+    line-height: 1em;
+    height: 1em;
+    padding: 0;
     &::placeholder{
         color: rgba($black, .4);
     }
 }
 
 .btn-newsletter{
+    width: 100%;
+    height: 60px;
     background-color: transparent;
     display: flex;
-    height: 100%;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-bottom: 1px solid $black;
+    @include media-breakpoint-up(md){
+        height: 100%;
+        padding: 0 30px;
+        border-top: 1px solid $black;
+    }
+}
+
+.n-arrow{
+    width: 13px;
+    height: 13px;
+    @include media-breakpoint-up(lg){
+        height: 18px;
+        width: 18px;
+    }
 }

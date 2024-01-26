@@ -15,6 +15,10 @@ Table of Contents
 3. Pages
    3.1 Home Page 
         3.1.1 Video Section
+    3.2 About Page
+        3.2.1 Description Section
+        3.2.2 Archive Section
+        3.2.3 Images Section
 */
 
 // 1. Normalize
@@ -97,8 +101,6 @@ input{
 // 2. Pages
 // 3.1 Home Page
 // 3.1.1 Video Section
-
-
 
 .video-container{
     transition: height 1s ease-in-out;
@@ -192,7 +194,30 @@ input{
     }
 }
 
-// 3.2.2 Images Section
+// 3.2.2 Archive Section
+
+.archivos-links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 13px;
+    @include media-breakpoint-up(md){
+        text-align: start;
+        gap: 18px;
+    }
+    @include media-breakpoint-up(lg){
+        gap: 20px;
+    }
+}
+
+.text-archive{
+    text-align: center;
+    @include media-breakpoint-up(md){
+        text-align: start;
+    }
+}
+
+// 3.2.3 Images Section
 
 .left-images{
     padding-right: 5px;

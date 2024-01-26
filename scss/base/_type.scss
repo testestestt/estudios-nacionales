@@ -82,6 +82,7 @@ h1{
     font-family: aktiv-grotesk, sans-serif;
     font-weight: 600;
     font-style: normal;
+    text-transform: uppercase;
     letter-spacing: 0.66px;
     line-height: 120%;
     font-size: 22px;
@@ -121,4 +122,9 @@ h2, .h2{
 
 h3, .h3{
     @include h3;
+}
+
+
+.fx-mt-h3{
+    padding-top: 3px !important;
 }

@@ -24,8 +24,5 @@
     border-bottom: 4px dotted $black;
 }
 
-.text-center-sm{
-    @include media-breakpoint-down(md){
-        text-align: center;
-    }
-}
+
+

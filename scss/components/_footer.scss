@@ -1,0 +1,39 @@
+
+.col-new-input{
+    width: 100%;
+    @include media-breakpoint-up(md){
+        width: calc(58.333334% + 15px);
+        padding-right: 0;
+    }
+    @include media-breakpoint-up(lg){
+        width: calc(66.66666667% - 15px);
+    }
+}
+
+.col-new-button{
+    @include media-breakpoint-up(md){
+        width: calc(41.66666667% - 15px);
+        padding-left: 0;
+    }
+    @include media-breakpoint-up(lg){
+        width: calc(33.33333333%);
+    }
+}
+
+.svg-insta{
+    width: 25px;
+    height: 25px;
+    @include media-breakpoint-up(lg){
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.svg-fb{
+    width: 25px;
+    height: 25px;
+    @include media-breakpoint-up(lg){
+        width: 30px;
+        height: 30px;
+    }
+}
