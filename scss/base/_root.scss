@@ -200,7 +200,7 @@ input{
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 13px;
+    gap: 10px;
     @include media-breakpoint-up(md){
         text-align: start;
         gap: 18px;
