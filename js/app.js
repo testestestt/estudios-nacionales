@@ -3,8 +3,14 @@ $(document).ready(function () {
     const headerHeight = $("header").outerHeight();
     $(".video-container").css("height", window.innerHeight - headerHeight);
   });
+  
   $("footer").load("../partials/footer.html");
  
+});
+
+$(window).resize(function () {
+  const headerHeight = $("header").outerHeight();
+  $(".video-container").css("height", window.innerHeight - headerHeight);
 });
 
 $(window).on('load', function () {

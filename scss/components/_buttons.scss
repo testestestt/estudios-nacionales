@@ -16,4 +16,13 @@
             }
         }
     }
+    &.btn-red{
+        border-color: $red;
+        color: $red;
+        svg{
+            path{
+                fill: $red;
+            }
+        }
+    }
 }

@@ -24,5 +24,18 @@
     border-bottom: 4px dotted $black;
 }
 
+.bg-red{
+    background: $red;
+    width: 100%;
+    height: 345px;
+    @include media-breakpoint-up(md){
+        height: 342px;
+    }
+    @include media-breakpoint-up(lg){
+        height: 526px;
+    }
+}
 
-
+.color-green{
+    color: $green;
+}

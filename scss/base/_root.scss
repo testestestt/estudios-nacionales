@@ -262,3 +262,42 @@ input{
         }
     }
 }
+
+
+// 3.3 Info Page
+// 3.3.1 Manifesto Section
+
+.manifesto{
+    &-text{
+        margin-left: auto;
+        margin-right: auto;
+        color: $green;
+        h2{
+        text-align: center;
+        }
+    }
+    &-img{
+        margin: 0 auto;
+        @include media-breakpoint-up(lg){
+            margin: 0;
+        }
+    }
+}
+
+// 3.3.2 Unete Section
+
+.unete-container{
+    background-color: $off-white;
+    padding: 45px 30px 55px;
+    @include media-breakpoint-up(md){
+        padding: 63px 60px 60px;
+    }
+    @include media-breakpoint-up(lg){
+        padding: 65px 110px 60px;
+    }
+    display: flex;
+    flex-direction: column;
+    h3{
+        text-align: center;
+    }
+}

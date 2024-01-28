@@ -9,8 +9,8 @@
 
 
 // Frameworks
-$ignore-deprecation-warnings: true;
 @import "../vendor/bootstrap/bootstrap";
+@import "../vendor/swiper/swiper.scss";
 
 // Variables
 @import "./base/variables";
@@ -40,3 +40,4 @@ $ignore-deprecation-warnings: true;
 @import "./components/loader";
 @import "./components/tags";
 @import "./components/thumbnails";
+@import "./components/swiper";
