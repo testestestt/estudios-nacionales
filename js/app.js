@@ -79,4 +79,3 @@ $('.burguer-menu').on('click', function(){
   $('.header-container').toggleClass('mix-blend-mode');
   $('.header-title').toggleClass('active');
 });
-
