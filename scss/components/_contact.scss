@@ -63,8 +63,7 @@
     &:hover{
         cursor: pointer;
     }
-    &::after{
-        content: '';
+    .color-contact{
         background: $black;
         opacity: 0.6;
         display: block;
@@ -73,7 +72,7 @@
         height: 100%;
     }
     &.active{
-        &::after{
+        .color-contact{
             background: $off-white;
         }
     }
