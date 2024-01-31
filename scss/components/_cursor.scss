@@ -1,0 +1,6 @@
+.cursor-expand{
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    transition: opacity ease 0.15s;
+}

@@ -116,6 +116,28 @@ input{
     bottom: 0;
     left: 0;
     width: 100%;
+
+    .cursor-expand{
+        display: none;
+    }
+
+    @include media-breakpoint-up(lg){
+        .cursor-expand{
+
+            display: block;
+            
+            &::after{
+                content: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.5 1.375H42.625V14.5M41.4262 2.57031L27.625 16.375M14.5 42.625H1.375V29.5M2.57383 41.4297L16.375 27.625' stroke='%23F4F3F0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+            }
+
+            &.in{
+                &::after{
+                    content: url("data:image/svg+xml,%3Csvg width='49' height='49' viewBox='0 0 49 49' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 46.5V29M29 29H46.5M29 29L47.4062 47.4016M21 3.5V21H3.5M19.4062 19.4016L1 1' stroke='%23F4F3F0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
+                }
+            }
+        }
+    }
+
     .video{
         width: 100%;
         height: 100%;
