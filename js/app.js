@@ -1,4 +1,4 @@
-
+//PARTIALS
 $(document).ready(function () {
   $(this).scrollTop(0); 
   if (history.scrollRestoration) {
@@ -11,11 +11,13 @@ $(document).ready(function () {
   $("footer").load("../partials/footer.html");
 });
 
+//HEADER ALTURA
 $(window).resize(function () {
   const headerHeight = $("header").outerHeight();
   $(".video-container").css("height", window.innerHeight - headerHeight);
 });
 
+//LOADER
 $(window).on('load', function () {
   r = responsive();
   const centerHeight = (window.innerHeight / 2) - r;
@@ -54,6 +56,7 @@ function responsive(){
   return responsivePadding;
 }
 
+//VIDEO CONTAINER GROW
 var bandera = false;
 
 $('.video-container').on('click', function(){
@@ -69,6 +72,7 @@ $('.video-container').on('click', function(){
   bandera = !bandera;
 });
 
+//CURSOR JS PARA EL VIDEO CONTAINER:
 $(document).ready(function(){
   console.log(
     $(window).innerWidth
@@ -106,6 +110,8 @@ $(document).ready(function(){
 
  });
 
+
+ //BURGER MENU
 $('.mobile-nav').on('click', function(event){
   if (!$(event.target).closest('.menu').length) {
     $('.burguer-menu').toggleClass('open');
@@ -121,3 +127,22 @@ $('.burguer-menu').on('click', function(){
   $('.header-container').toggleClass('mix-blend-mode');
   $('.header-title').toggleClass('active');
 });
+
+
+//SCROLL LENIS PARA UN FUNCIONAMIENTO SMOOTH
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
+
+//PARALLAX EN GALERIAS
+var rellax = new Rellax('.rellax');
