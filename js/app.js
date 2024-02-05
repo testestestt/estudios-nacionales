@@ -110,6 +110,28 @@ $(document).ready(function(){
 
  });
 
+//OPACITY OF BUTTON CONTACT
+$(window).scroll(function() {
+  var footerPost = ($('body').height() - ($('footer').height()));
+  var opacityContact = ($('footer').height() - ($(window).scrollTop() + $(window).innerHeight() - footerPost + $('footer').height())) / $('footer').height();
+
+  if (($(window).scrollTop() + $(window).innerHeight() + $('footer').height()) >= footerPost) {
+      $('.contact-button .color-contact, .burguer-menu').css('opacity', opacityContact * 0.6); 
+      $('.contact-button').css('backdrop-filter', 'blur(' + opacityContact * 10 + 'px)'); 
+  }
+  else{
+      $('.contact-button .color-contact').css('opacity', '' ); 
+      $('.contact-button').css('backdrop-filter', '');
+  }
+
+  if (($(window).scrollTop() + $(window).innerHeight()) >= footerPost){
+    $('.contact-button, .burguer-menu').css('pointer-events', 'none');
+  }
+  else{
+    $('.contact-button, .burguer-menu').css('pointer-events', '');
+  }
+
+});
 
  //BURGER MENU
 $('.mobile-nav').on('click', function(event){
