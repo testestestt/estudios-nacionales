@@ -25,7 +25,9 @@
     font-size: 15px;
     letter-spacing: 0.3px;
     text-transform: uppercase;
+    line-height: 21.3px;
     @include media-breakpoint-up(lg){
+        line-height: 25.5px;
         font-size: 18px;
         letter-spacing: normal;
     }

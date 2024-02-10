@@ -134,13 +134,19 @@ input{
     left: 0;
     width: 100%;
 
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .cursor-expand{
         display: none;
     }
 
     @include media-breakpoint-up(lg){
         .cursor-expand{
-
+            mix-blend-mode: difference;
             display: block;
             
             &::after{
@@ -346,6 +352,93 @@ input{
     flex-direction: column;
     h3{
         text-align: center;
+    }
+}
+
+// 3.4 Archivo Page
+// 3.4.1 Filter Section
+.container-tag{
+    background-color: $off-white;
+    border-radius: 10px;
+    padding: 32px 0px;
+    @include media-breakpoint-up(md){
+        padding: 65px 15px 60px;
+        position: sticky;
+        top: 15px;
+    }
+    .categories{
+        display: flex;
+        gap: 2.5px;
+        align-items: center;
+        overflow: scroll;
+        text-wrap: nowrap;
+        @include media-breakpoint-up(md){
+            text-wrap: wrap;
+            overflow: auto;
+            flex-direction: column;
+            gap: 15px;
+            span{
+                display: none;
+            }
+        }
+    }
+    .tags{
+        display: flex;
+        gap: 5px;
+        overflow: scroll;
+        @include media-breakpoint-up(md){
+            overflow: auto;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .tag{
+            @include link;
+            padding: 8px 30px;
+            border-radius: 50px;
+            color: $white;
+            display: inline-block;
+            opacity: 0.5;
+            &-video{
+                background-color: $red;
+            }
+            &-foto{
+                background-color: $blue;
+            }
+            &-ins{
+                background-color: $green;
+            }
+            &.active{
+                opacity: 1;
+            }   
+        }
+    }
+}
+
+// 3.4.2 Archive Section
+.archive-container{
+    display: block;
+    .text-wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3px;
+    }
+    padding-top: 15px;
+    @include media-breakpoint-up(md){
+        padding-top: 30px;
+    }
+
+    &:first-child{
+        @include media-breakpoint-up(lg){
+            padding-top: 0;
+        }
+    }
+}
+
+.left-images{
+    .archive-container{
+        &:first-child{
+            padding-top: 0;
+        }
     }
 }
 
