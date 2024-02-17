@@ -74,9 +74,7 @@ $('.video-container').on('click', function(){
 
 //CURSOR JS PARA EL VIDEO CONTAINER:
 $(document).ready(function(){
-  console.log(
-    $(window).innerWidth
-  )
+
   if (window.innerWidth > 992) {
     
     var cursor = $('.cursor-expand');
@@ -153,10 +151,6 @@ $('.burguer-menu').on('click', function(){
 
 //SCROLL LENIS PARA UN FUNCIONAMIENTO SMOOTH
 const lenis = new Lenis()
-
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
 
 function raf(time) {
   lenis.raf(time)
