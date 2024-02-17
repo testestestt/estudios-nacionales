@@ -147,18 +147,3 @@ $('.burguer-menu').on('click', function(){
   $('.header-container').toggleClass('mix-blend-mode');
   $('.header-title').toggleClass('active');
 });
-
-
-//SCROLL LENIS PARA UN FUNCIONAMIENTO SMOOTH
-const lenis = new Lenis()
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-
-
-//PARALLAX EN GALERIAS
-var rellax = new Rellax('.rellax');
