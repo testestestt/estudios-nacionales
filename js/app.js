@@ -74,7 +74,6 @@ $('.video-container').on('click', function(){
 
 //CURSOR JS PARA EL VIDEO CONTAINER:
 $(document).ready(function(){
-
   if (window.innerWidth > 992) {
     
     var cursor = $('.cursor-expand');
@@ -147,3 +146,22 @@ $('.burguer-menu').on('click', function(){
   $('.header-container').toggleClass('mix-blend-mode');
   $('.header-title').toggleClass('active');
 });
+
+
+//SCROLL LENIS PARA UN FUNCIONAMIENTO SMOOTH
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
+
+//PARALLAX EN GALERIAS
+var rellax = new Rellax('.rellax');
